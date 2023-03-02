@@ -27,12 +27,18 @@ public class PlayAnMP3 extends Application {
 
   @Override
   public void start(Stage stage) throws Exception {
-    BorderPane pane = new BorderPane();
-    String path = "songfiles/Capture.mp3";
-    pane.setCenter( new Label(path));
+	// I changed the name of the pane to be "brennanPane",
+	// because it is a pane that Brennan named.
+    BorderPane brennanPane = new BorderPane();
+    // Brennan Mitchell, the guy typing this, changed the song
+    // to DanseMacabreViolinHook
+    String path = "songfiles/DanseMacabreViolinHook.mp3";
+    // very macabre indeed.
+    brennanPane.setCenter( new Label(path));
     playASong(path);
     // Put the pane in a sized Scene and show the GUI
-    Scene scene = new Scene(pane, 255, 85); // 255 pixels wide, 85 pixels tall
+    Scene scene = new Scene(brennanPane, 255, 85); // 255 pixels wide, 85 pixels tall
+    // the new scene contains a brennanPane at 255 pixels wide, 85 pixels tall.
     stage.setScene(scene);
     // Don't forget to show the running app:
     stage.show();
